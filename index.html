@@ -198,23 +198,23 @@
 
 .footer-section1
 {
-  background-image:url("https://res.cloudinary.com/dpfnyv0ut/image/upload/v1705415955/images_eixcqt.jpg");
+  /* background-image:url("https://res.cloudinary.com/dpfnyv0ut/image/upload/v1705415955/images_eixcqt.jpg"); */
   margin-top: 30px;
-  background-size: cover;
-  height: 50vh;
-  backdrop-filter: blur(5px);
+  /* background-size: cover; */
+  /* height: 50vh;
+  backdrop-filter: blur(5px); */
 }
 .footer-section1 .content1-para
 {
   width: 300px;
   height: 200px;
   overflow-y: scroll;
-  color: white;
+  color: rgb(0, 0, 0);
   backdrop-filter: blur(10px);
 }
 .footer-section1 h3
 {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .special-offer-img
@@ -224,7 +224,7 @@
 }
 .special-offer-para
 {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 
@@ -281,6 +281,40 @@
 }
 
 
+@media (max-width: 576px) {
+  #display
+  {
+    display: none;
+   
+
+  }
+  
+}
+
+
+/* animations */
+
+.logo-animation{
+    animation: image 2s infinite;
+}
+@keyframes image{
+          100%{
+            transform: scale3d(2,2,2);
+            transition: 0.5s ease;
+          }
+}
+
+.specialoffer-animation{
+    animation: image1 2s infinite;
+}
+@keyframes image1{
+          100%{
+           transform: rotate(-60deg);
+            transition: 0.5s ease;
+          }
+}
+
+
 </style>
 
   </head>
@@ -290,7 +324,7 @@
       <div class="container">
         <a class="navbar-brand" href="#">
           <img
-            class="navbar-img"
+            class="navbar-img logo-animation"
             src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1703127460/leisure-travel-tourism-logo-design8-removebg-preview_gjrihp.png"
             alt="navbar-logo"
           />
@@ -857,7 +891,7 @@
 <div class="footer-section1">
   <div class="container">
       <div class="row">
-        <div class="col-12 col-md-5 order2 order-md-1 pt-3">
+        <div class="col-12 col-md-5 order2 order-md-1 pt-3" id="display">
         <h3>About</h3>
         <p class="content1-para">
           India Tourism Development Corporation has built an impressive infrastructure: hotels, 
@@ -874,7 +908,7 @@
       </div>
        <div class="content2 col-12 col-md-7 order1 order-md-2">
         <img class="special-offer-img" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1705422816/travel-person-human-hat-clothing-transparent-png-370604-removebg-preview_qseasz.png" alt="">
-       <img class="special-offer-img" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1705423492/Special-offer-Download-PNG_al94so.png" alt="">
+       <img class="special-offer-img specialoffer-animation" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1705423492/Special-offer-Download-PNG_al94so.png" alt="">
         <p class="special-offer-para">
           Take a look at the itinerary and package details like where to stay, 
           what to eat, how to get around, what kind of guided tours there are, 
@@ -887,7 +921,7 @@
 
 <!-- footer-section2 -->
 
-<div class="footer-section2 text-center">
+<div class="footer-section2 text-center pt-5 pb-2">
   <div class="container">
     <div class="row">
       <div class="col-12">
