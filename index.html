@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make My Trip</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/12a30455c3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <link rel="stylesheet" href="./index.css" /> -->
+    <!-- <script src="./index.js"></script> -->
+
+<style>
+  /* navbar */
+
+.navbars {
+  background-color: rgb(13, 39, 123);
+}
+.navbar-img {
+  height: 90px;
+  width: 100px;
+}
+.navbar-links a {
+  font-family: "Roboto";
+  color: white;
+  /* text-transform: uppercase; */
+  font-size: 16px;
+  margin-right: 10px;
+}
+#dd-item {
+  color: black;
+}
+#dd-item:hover {
+  background-color: royalblue;
+  color: white;
+}
+.navbar-links a:hover {
+  color: rgb(55, 191, 55);
+}
+.navbar-para {
+  font-size: 10px;
+}
+#navbar-para1 {
+  color: rgb(12, 180, 12);
+  font-size: 14px;
+}
+#navbar-para2 {
+  color: royalblue;
+}
+
+/* curosel */
+
+.carousel-img {
+  height: 700px;
+}
+
+@media (max-width: 576px) {
+  .carousel-img {
+    height: 500px;
+    /* Adjust this value as needed */
+  }
+}
+
+.carousel-text  h5
+{
+    font-size: 25px;
+    font-family: "Roboto";
+    /* backdrop-filter: blur(2px); */
+}
+.carousel-text
+{
+    backdrop-filter: blur(2px); 
+}
+.carousel-text2  h5
+{
+    font-size: 25px;
+    font-family: "Roboto";
+    /* backdrop-filter: blur(2px); */
+}
+.carousel-text2
+{
+    backdrop-filter: blur(3px); 
+}
+
+/* imges album */
+
+/* place section */
+
+.places-section-img
+{
+  height: 200px;
+}
+.places-section-card h1
+{
+  margin-top: -48px;
+  color: black;
+  font-weight: bold;
+  backdrop-filter: blur(8px);
+  font-family: "Roboto";
+}
+
+
+@media (max-width: 576px) {
+  .places-section-card h1 
+  {
+    margin-top: -32px;
+    backdrop-filter: blur(13px);
+    font-family: "Roboto";
+
+  }
+  #cards
+  {
+   margin-top: 5px;
+  }
+  #accommodation
+  {
+    margin-top: -45px;
+  }
+}
+
+/* accommodations */
+
+
+.hotel-section-img
+{
+  height: 200px;
+  /* width: 200px; */
+}
+.caption-heading
+{
+  font-size: 15px;
+}
+.caption-heading
+{
+  margin-top: -54px;
+  backdrop-filter: blur(9px);
+  color: white;
+  padding-left: 10px;
+}
+.caption-heading span
+{
+  color:rgb(210, 204, 204);
+  font-size: 13px;
+}
+
+/* ad-section */
+
+.ad-section
+{
+    background-image: linear-gradient(white,rgb(80, 109, 197));
+
+}
+.ad-section-img
+{
+    height: 210px;
+}
+.ad-section-heading
+{
+    color: black;
+    font-family: "Roboto";
+    font-size: 22px;
+    font-weight: 700;
+
+}
+.ad-section-para
+{
+    color: #282e33;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 500;
+}
+.ad-section-button
+{
+    color:black;
+    font-family: "Roboto";
+    background-image: linear-gradient(#ffffff,#0048ff 80%);
+    border-radius: 5px;
+    height: 40px;
+    width: 200px;
+    border-width: 0px;
+    font-size: 17px;
+}
+
+/* footersectionq */
+
+
+.footer-section1
+{
+  background-image:url("https://res.cloudinary.com/dpfnyv0ut/image/upload/v1705415955/images_eixcqt.jpg");
+  margin-top: 30px;
+  background-size: cover;
+  height: 50vh;
+  backdrop-filter: blur(5px);
+}
+.footer-section1 .content1-para
+{
+  width: 300px;
+  height: 200px;
+  overflow-y: scroll;
+  color: white;
+  backdrop-filter: blur(10px);
+}
+.footer-section1 h3
+{
+  color: white;
+}
+
+.special-offer-img
+{
+  height: 200px;
+  width: 300px;
+}
+.special-offer-para
+{
+  color: white;
+}
+
+
+@media (max-width: 576px) {
+  .special-offer-para 
+  {
+    color:white;
+   
+
+  }
+  .content2
+  {
+    background-image: linear-gradient(white  ,rgb(25, 54, 142)50%);
+  }
+ 
+}
+/* footer-section2 */
+.footer-section2
+{
+  background-color: rgb(12, 29, 81);
+}
+
+
+.footer-section2-address
+{
+    color:white;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+}
+.footer-section2-para
+{
+    color:rgb(229, 224, 224);
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 300;
+} 
+.footer-section2-card
+{
+    background-color:rgb(28, 63, 168);
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    padding-top: 10px;
+    padding-bottom: 22px;
+    padding-right: 14px;
+    padding-left: 12px;
+    margin-right: 10px;
+}
+.icons{
+    font-size: 20px;
+    color:white;
+}
+
+
+</style>
+
+  </head>
+  <body>
+    <!-- nav-bar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbars">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            class="navbar-img"
+            src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1703127460/leisure-travel-tourism-logo-design8-removebg-preview_gjrihp.png"
+            alt="navbar-logo"
+          />
+        </a>
+        <div class="d-none d-md-block">
+           <p><pre id="navbar-para1" ><span id="navbar-para2">The more you love it</span>
+  The more you see it...
+           </pre></p>
+           </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item navbar-links">
+              <a class="nav-link" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-building"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"
+                  />
+                  <path
+                    d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z"
+                  />
+                </svg>
+                Accommodation</a
+              >
+            </li>
+            <li class="nav-item navbar-links">
+              <a class="nav-link" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-suitcase-lg-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7 0a2 2 0 0 0-2 2H1.5A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14H2a.5.5 0 0 0 1 0h10a.5.5 0 0 0 1 0h.5a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2H11a2 2 0 0 0-2-2zM6 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1zM3 13V3h1v10zm9 0V3h1v10z"
+                  />
+                </svg>
+                Tour Package's</a
+              >
+            </li>
+            <li class="nav-item navbar-links">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-sailboat"> </i> Boating
+              </a>
+            </li>
+            <li class="nav-item navbar-links">
+              <a class="nav-link" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-airplane"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1s-.458.158-.678.599"
+                  />
+                </svg>
+                Flights</a
+              >
+            </li>
+            <li class="nav-item dropdown navbar-links">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-sailboat"></i> River Cruise</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#" id="dd-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-journal-check"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0"
+                      />
+                      <path
+                        d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"
+                      />
+                      <path
+                        d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"
+                      />
+                    </svg>
+                    Booking</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" id="dd-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-journal-check"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0"
+                      />
+                      <path
+                        d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"
+                      />
+                      <path
+                        d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"
+                      />
+                    </svg>
+                    Registration</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#" id="dd-item">
+                    Something else here</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown navbar-links">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-building-lock"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6.5a.5.5 0 0 1-1 0V1H3v14h3v-2.5a.5.5 0 0 1 .5-.5H8v4H3a1 1 0 0 1-1-1z"
+                  />
+                  <path
+                    d="M4.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM9 13a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1"
+                  />
+                </svg>
+                Manage Booking</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#" id="dd-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-building-check"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514"
+                      />
+                      <path
+                        d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6.5a.5.5 0 0 1-1 0V1H3v14h3v-2.5a.5.5 0 0 1 .5-.5H8v4H3a1 1 0 0 1-1-1z"
+                      />
+                      <path
+                        d="M4.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"
+                      />
+                    </svg>
+                    Hotel Booking</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" id="dd-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-building-x"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6.5a.5.5 0 0 1-1 0V1H3v14h3v-2.5a.5.5 0 0 1 .5-.5H8v4H3a1 1 0 0 1-1-1z"
+                      />
+                      <path
+                        d="M4.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm5 8a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m-.646-4.854.646.647.646-.647a.5.5 0 0 1 .708.708l-.647.646.647.646a.5.5 0 0 1-.708.708l-.646-.647-.646.647a.5.5 0 0 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 .708-.708"
+                      />
+                    </svg>
+                    Hotel Booking Cancellation</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" id="dd-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-building-gear"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6.5a.5.5 0 0 1-1 0V1H3v14h3v-2.5a.5.5 0 0 1 .5-.5H8v4H3a1 1 0 0 1-1-1z"
+                      />
+                      <path
+                        d="M4.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.386 1.46c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382zM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"
+                      />
+                    </svg>
+                    Hotel Booking Reshedule</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item navbar-links">
+              <a class="nav-link" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-journal-check"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0"
+                  />
+                  <path
+                    d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"
+                  />
+                  <path
+                    d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"
+                  />
+                </svg>
+                Contact</a
+              >
+            </li>
+            <li class="nav-item navbar-links">
+              <a class="nav-link" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-lock-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"
+                  />
+                </svg>
+                Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- courosel album -->
+     <div class="container-fulid">
+      <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+           <button
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img
+              src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1703246704/self-drive-car-rental-delhi-gurgaon-noida_revv-blog_cdqxyi.jpg"
+              class="d-block w-100 carousel-img"
+              alt="..."
+            />
+            <div class="carousel-caption carousel-text">
+              <h5>THE INDIA GATE</h5>
+              <p>
+                India Gate is counted amongst the largest war memorials in India and every Republic Day,<br>
+                the Prime Minister visits the gate to pay their tributes to the Amar Jawan Jyoti,<br> 
+                following which the Republic Day parade starts.India Gate is often a location <br>
+                for civil society protests, and is popular with tourists. 
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="1000">
+            <img
+              src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1703246830/Red-Fort_ge0vw8.jpg"
+              class="d-block w-100 carousel-img"
+              alt="..."
+            />
+            <div class="carousel-caption carousel-text2">
+              <h5>THE RED FORT</h5>
+              <p>
+                The Red Fort is famous for its historical legacy, structure,<br> 
+                and long encompassing walls. It is also the place where the <br>
+                Prime Minister of India hoists the national flag of<br> 
+                India every year on Independence day.<br>
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="1000">
+            <img
+              src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1703246659/india-top-attractions-taj-mahal_mhf7ha.jpg"
+              class="d-block w-100 carousel-img"
+              alt="..."
+            />
+            <div class="carousel-caption carousel-text2" >
+              <h5>THE TAJMAHAL</h5>
+              <p>
+                Welcome to Taj Mahal, Standing majestically on the banks of River Yamuna.<br>
+                Taj Mahal is famous for Own beauty and one of the wonders of the world.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1703246921/mysore-palace_wekzlg.jpg"
+              class="d-block w-100 carousel-img"
+              alt="..."
+            />
+            <div class="carousel-caption carousel-text2">
+              <h5>THE MYSORE PALACE</h5>
+              <p>
+                Mysuru Palace is the symbol of grandeur & royal heritage at Karnataka cultural capital Mysuru.<br>
+                Palace & Brindavan Gardens famous tourist attractions in India.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="500">
+            <img
+              src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1703247263/fetch_izytdh.jpg"
+              class="d-block w-100 carousel-img"
+              alt="..."
+            />
+            <div class="carousel-caption carousel-text2">
+              <h5>NAGARJUNA SAGAR DAM</h5>
+              <p>
+                Nagarjunasagar is a site of spectacular man-made marvel<br>
+                flanked by equally enchanting panoramic vistas of lush green<br>
+                surrounding. is world's tallest masonry dam Nagarjunasagar<br> 
+                dam built over Krishna River.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!--images slider -->
+   
+    <!-- popular destinations -->
+  <div class="places-section pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="places-section-heading">Popular Destinations</h1>
+          <p class="places-section-para">We love to tell our successfull & beautiful destination places.</p>
+        </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+      <div class="places-section-card shadow">
+        <img class="places-section-img w-100" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1705380088/Prakasam_EPS_g5q9qo.avif" alt="">
+        <h1 class="caption">Vijayawada</h1> 
+      </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3" id="cards">
+      <div class="places-section-card shadow">
+        <img class="places-section-img w-100" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1705380378/996x492_g0ciwi.jpg" alt="">
+        <h1 class="caption">Goa</h1>
+      </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3" id="cards">
+      <div class="places-section-card shadow">
+        <img class="places-section-img w-100" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1705379824/borra-caves-405x270_fqn2sp.jpg" alt="">
+        <h1 class="caption">Araku</h1>
+      </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3" id="cards">
+      <div class="places-section-card shadow">
+        <img class="places-section-img w-100" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1705379991/Velankanni-Church-Tamil-Nadu_ogyexe.jpg" alt="">
+        <h1 class="caption">Chennai</h1>
+      </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3" id="cards">
+        <div class="places-section-card shadow">
+          <img class="places-section-img w-100" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1705380144/charminar-hyderabad-telangana_plwqd4.png" alt="">
+          <h1 class="caption">Hyderabad</h1>
+        </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3" id="cards">
+          <div class="places-section-card shadow">
+            <img class="places-section-img w-100" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1703247391/what-is-kerala-famous-for_jlbjwd.jpg" alt="">
+            <h1 class="caption">Kerela</h1>
+          </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3" id="cards">
+            <div class="places-section-card shadow">
+              <img class="places-section-img w-100" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1703246921/mysore-palace_wekzlg.jpg" alt="">
+              <h1 class="caption">Mysore</h1>
+            </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3" id="cards">
+              <div class="places-section-card shadow">
+                <img class="places-section-img w-100" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1703246764/36097a355485fbea042c6890a440418e-680x380_jkynkt.jpg" alt="">
+                <h1 class="caption">Delhi</h1>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+<!-- accommodation -->
+
+<div class="hotel-section pt-5 pb-5" id="accommodation">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="hotel-section-heading">Accommodations</h1>
+        <p class="hotel-section-para">The public thinks that homelessness is about not having any accommodation to go to.</p>
+      </div>
+    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+    <div class="hotel-section-card shadow">
+      <img class="hotel-section-img w-100" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1704278423/hotelimage_zkldqt.jpg" alt="">
+      <h1 class="caption-heading">NELLORE,HARITHA<br>HOTEL<span><br>NELLORE</span></h1>
+      <!-- <p class="caption-para">NELLORE</p>  -->
+    </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 col-xl-2" id="cards">
+      <div class="hotel-section-card shadow">
+        <img class="hotel-section-img w-100" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1704278525/5dce3ca3d2e4a766c4551173_1573797027388_aqhlkz.jpg" alt="">
+        <h1 class="caption-heading">BHAVANI-ISLAND,<br>HARITHA HOTEL<span><br>VIJAYAWADA</span></h1>
+        <!-- <p class="caption-para">VIJAYAWADA</p> -->
+      </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xl-2" id="cards">
+        <div class="hotel-section-card shadow">
+          <img class="hotel-section-img w-100" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1704278086/images_ugguue.jpg" alt="">
+          <h1 class="caption-heading">TYDA,HARiTHA-VALLEY<br>RESORT<span><br>ARAKU</span></h1>
+          <!-- <p class="caption-para">ARAKU</p> -->
+        </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-2" id="cards">
+          <div class="hotel-section-card shadow">
+            <img class="hotel-section-img w-100" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1704278203/the-park-chennai-p_q7pofc.webp" alt="">
+            <h1 class="caption-heading">DINDI,HARITHA-<br>COCONUT RESORT<span><br>DINDI</span></h1>
+            <!-- <p class="caption-para">DINDI</p> -->
+          </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-2" id="cards">
+            <div class="hotel-section-card shadow">
+              <img class="hotel-section-img w-100" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1704278245/hablis_suite_-_hablis_hotel_in_chennai_0_ewzi0c.avif" alt="">
+              <h1 class="caption-heading">BERM PARK,HARITHA<br>HOTEL<span><br>HEYDREBAD</span></h1>
+              <!-- <p class="caption-para">HEYDREBAD</p>  -->
+            </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-2" id="cards">
+              <div class="hotel-section-card shadow">
+                <img class="hotel-section-img w-100" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1704278285/araku-resorts-11-600x400_l38mmf.jpg" alt="">
+                <h1 class="caption-heading">BERM PARK,HARITHA<br>RESORT<span><br>VIZAG</span></h1>
+                <!-- <p class="caption-para">Vizag</p>  -->
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+<!-- ad-section -->
+
+<div class="ad-section pb-5 pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-5">
+        <div class="text-center">
+          <img class="ad-section-img w-100" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1705385101/Boat-Ride-removebg-preview_asl4l9.png" alt=""/>
+       </div>
+      </div>
+      <div class="col-12 col-md-7">
+        <h1 class="ad-section-heading">BOATING  & RIVER CRUISE</h1>
+        <p class="ad-section-para">the activity of traveling on water in a boat for pleasure
+          as in sailing. to travel on water in a vessel boated to the picnic site on an island 
+          in the bay sailing, cruising, ferrying. Boating is an excellent hobby on it's own, 
+          but it's also a great complement for other interests! Read on below for ideas on how 
+          you can bring your hobbies with you next time you head out on the water.
+        </p>
+        <button class="ad-section-button shadow">A video for your's</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer-section1 -->
+  
+<div class="footer-section1">
+  <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-5 order2 order-md-1 pt-3">
+        <h3>About</h3>
+        <p class="content1-para">
+          India Tourism Development Corporation has built an impressive infrastructure: hotels, 
+          resorts, transport fleet and amenities to promote an array of tourist activity. 
+          Excellent facilities that offer value for money includes hotels and resorts, 
+          wayside amenities, transport, information & reservation centers/kiosks, 
+          culturally vibrant sound & light shows, leisure boating, pleasure cruises 
+          with facilities such as conferencing and catering, and above all a journey 
+          of heritage discovery.INTDC is establishing new facilities while upgrading 
+          the existing ones, introducing new products and enhancing the quality of services 
+          to meet the growing expectations of tourists and the challenges of the future!
+          Come, experience  with INTDC... you'll always come back for more!
+        </p>
+      </div>
+       <div class="content2 col-12 col-md-7 order1 order-md-2">
+        <img class="special-offer-img" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1705422816/travel-person-human-hat-clothing-transparent-png-370604-removebg-preview_qseasz.png" alt="">
+       <img class="special-offer-img" src="https://res.cloudinary.com/dpfnyv0ut/image/upload/v1705423492/Special-offer-Download-PNG_al94so.png" alt="">
+        <p class="special-offer-para">
+          Take a look at the itinerary and package details like where to stay, 
+          what to eat, how to get around, what kind of guided tours there are, 
+          and what the entrance fees are. Make sure you get the experiences 
+          you want and that the package fits your needs.</p>
+       </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer-section2 -->
+
+<div class="footer-section2 text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="footer-section2-address">indiantour@gmail.com</h1>
+        <p class="footer-section2-para">315 Ayur Vigyan Nagar, New Delhi, India.</p>
+         <div class="col-12 d-flex flex-row justify-content-center mt-3">
+          <div class="footer-section2-card mr-5">
+            <i class="fa brands fa-facebook icons"></i>
+          </div>
+          <div class="footer-section2-card mr-5">
+            <i class="fa brands fa-twitter icons"></i>
+          </div>
+          <div class="footer-section2-card mr-5">
+            <i class="fa brands fa-instagram icons"></i>
+          </div>
+        </div>
+       </div>
+    </div>
+  </div>
+</div> 
+
+
+
+  </body>
+</html>
